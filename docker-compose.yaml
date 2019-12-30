@@ -1,0 +1,10 @@
+version: '3'
+services:
+  luigid:
+    build: .
+    command: server
+  task-hello-world:
+    build: .
+    command: task-hello-world
+    depends_on:
+      - luigid
