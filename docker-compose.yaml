@@ -2,9 +2,12 @@ version: '3'
 services:
   luigid:
     build: .
+    image: luigi
     command: server
+    restart: on-failure
+
   task-hello-world:
-    build: .
+    image: luigi
     command: task-hello-world
     depends_on:
       - luigid
